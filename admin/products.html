@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catalog Admin - Products</title>
+    <title>Catalog Automobile</title>
     
     <!-- Jquery JS file -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -18,19 +18,20 @@
     <script type="text/javascript" src="js/serialize.js"></script>
     <script type="text/javascript" src="js/products.js"></script>
 </head>
-<body>
+<body style="background-color:lightgrey;">
 
 <!-- Content Section -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Product Catalog Admin</h1>
+            <h1>Catalog Automobile</h1>
         </div>
     </div>
     <ul class="nav nav-tabs">
       <li role="presentation"><a href="/admin/">Home</a></li>
       <li role="presentation"><a href="categories.html">Categorii</a></li>
       <li role="presentation" class="active"><a href="products.html">Produse</a></li>
+      <li role="presentation"><a href="reviews.html">Review-uri</a>
     </ul>
     <br/>
     <div class="row">
@@ -42,7 +43,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="records_content">
+            <div class="records_content" style="background-color:grey;">
                 <br/>
                 <h3>Produse</h3>
                 <table id="articles" class="table table-bordered table-striped">
@@ -51,11 +52,12 @@
 							<th>Category Name</th>
 							<th>Nume</th>
 							<th>Descriere</th>
+							<th>Price</th>
 							<th>Update</th>
 							<th>Exclude</th>
 						</tr>
             		</tr>
-				</<table>
+				<table>
             </div>
         </div>
     </div>

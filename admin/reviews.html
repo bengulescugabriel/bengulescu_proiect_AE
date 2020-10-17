@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Categorii Automobile</title>
+    <title>Review-uri</title>
     
     <!-- Jquery JS file -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -16,7 +16,7 @@
     
     <!-- Custom JS file -->
     <script type="text/javascript" src="js/serialize.js"></script>
-    <script type="text/javascript" src="js/categories.js"></script>
+    <script type="text/javascript" src="js/reviews.js"></script>
 </head>
 <body style="background-color:lightgrey;">
 
@@ -24,14 +24,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Categorii Automobile</h1>
+            <h1>Review-uri</h1>
         </div>
     </div>
     <ul class="nav nav-tabs">
-      <li role="presentation" ><a href="/admin/">Home</a></li>
-      <li role="presentation" class="active"><a href="categories.html">Categorii</a></li>
+      <li role="presentation"><a href="/admin/">Home</a></li>
+      <li role="presentation"><a href="categories.html">Categorii</a></li>
       <li role="presentation"><a href="products.html">Produse</a></li>
-      <li role="presentation"><a href="reviews.html">Review-uri</a>
+      <li role="presentation" class="active"><a href="reviews.html">Review-uri</a>
     </ul>
     <br/>
     <div class="row">
@@ -45,12 +45,14 @@
         <div class="col-md-12">
             <div class="records_content" style="background-color:grey;">
                 <br/>
-                <h3>Categorii</h3>
+                <h3>Review-uri</h3>
                 <table id="articles" class="table table-bordered table-striped">
 						<tr>
-							<th>ID.</th>
+						    <th>ID</th>
+							<th>ID Produs</th>
 							<th>Nume</th>
-							<th>Descriere</th>
+							<th>Content</th>
+							<th>Score</th>
 							<th>Update</th>
 							<th>Exclude</th>
 						</tr>
@@ -70,25 +72,32 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add New Category</h4>
+                <h4 class="modal-title" id="myModalLabel">Add New Review</h4>
             </div>
             <div class="modal-body">
                 <form id="record_form">
                     <input type="hidden" name="id" id="id" />
                     <div class="form-group">
-                        <label for="name">Nume</label>
-                        <input type="text" name="name" id="name" placeholder="Descriere" class="form-control"/>
+                        <label for="name">Product ID</label>
+                        <input type="text" name="product_id" id="product_id" placeholder="ID Produs" class="form-control"/>
                     </div>
-    
                     <div class="form-group">
-                        <label for="abstract">Descriere</label>
-                        <textarea name="description" id="description" placeholder="Descriere" rows="5" class="form-control"></textarea>
+                        <label for="abstract">Nume</label>
+                        <input type="text" name="name" id="name" placeholder="Nume" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="abstract">Content</label>
+                        <textarea name="content" id="content" placeholder="Content" rows="5" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="abstract">Score</label>
+                        <input type="text" name="score" id="score" placeholder="Score" class="form-control">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="saveRecord()">Save Record</button>
+                <button type="button" class="btn btn-primary" onclick="saveRecords()">Save Record</button>
             </div>
         </div>
     </div>

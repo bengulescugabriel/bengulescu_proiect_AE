@@ -27,7 +27,7 @@ function showProducts(categoryId) {
                 html = html + '<div class="product">'
                   +  '<h2>'+product.name+'</h2>'
                   +  '<p>'+product.description+'</p>'
-                  +  '<p>Pret: '+product.pret+'</p>'
+                  +  '<p>Pret: '+product.price+'</p>'
                   +  '<p>Categorie: '+product.category.name+'</p>'
                 + '</div>';
                 
